@@ -1,0 +1,255 @@
+:root {
+  --blue: hsl(223, 87%, 63%);
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+@font-face {
+  font-family: "LibreFranklin";
+  src: url("./fonts/LibreFranklin.ttf");
+}
+
+.App {
+  
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "LibreFranklin";
+  background-color: var(--very-dark-blue); /* Set background color to dark blue */
+  
+ 
+  box-shadow: 0px 35px 70px 0px rgba(58, 18, 180, 0.65), 0px 30px 40px -10px rgba(20, 50, 116, 0.55);
+  background: linear-gradient(180deg, rgb(11, 11, 12) 0%, rgb(72, 23, 117) 100%);
+  border-radius: 10px;
+  
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 300;
+  color: whitesmoke;
+}
+
+.hero span {
+  font-weight: 700;
+  color:aliceblue(215, 228, 228);
+}
+
+.hero p {
+  font-size: 20px;
+  font-weight: 300;
+  color:grey;
+  margin-top: -25px;
+}
+
+.hero form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.input {
+  height: 50px;
+  width: 375px;
+  border: 1px solid var(--pale-blue);
+  border-radius: 25px;
+  background-color: transparent;
+  padding-left: 30px;
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+}
+
+.input:focus {
+  outline: none;
+  opacity: 1;
+}
+
+.invalidInput {
+  height: 50px;
+  width: 375px;
+  border: 2px solid var(--light-red);
+  border-radius: 25px;
+  background-color: transparent;
+  padding-left: 30px;
+  opacity: 0.5;
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+}
+
+.invalidInput:focus {
+  outline: none;
+  opacity: 1;
+}
+
+::placeholder {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--pale-blue);
+}
+
+.button {
+  width: 175px;
+  height: 52px;
+  border: none;
+  border-radius: 25px;
+  background-color: var(--blue);
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+  margin-left: 20px;
+  box-shadow: 0px 10px 20px var(--pale-blue);
+}
+
+.button:active {
+  opacity: 0.8;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.errorMessage {
+  position: absolute;
+  margin-left: -340px;
+  margin-top: 100px;
+  color: var(--light-red);
+  font-size: 12px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.errorMessage input {
+  border: 1px solid var(--light-red);
+}
+
+.illustration {
+  height: 370px;
+  margin-top: 80px;
+}
+
+.socials {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.socialButton {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--pale-blue);
+  border-radius: 100%;
+  background-color: white;
+}
+
+.socialButton:hover {
+  cursor: pointer;
+  background-color: var(--blue);
+}
+
+.icon {
+  color: var(--blue);
+}
+
+.socialButton:hover .icon {
+  color: white;
+}
+
+.copyright {
+  font-size: 14px;
+  color: var(--gray);
+  margin-top: 30px;
+}
+
+.copyrightIcon {
+  color: var(--gray);
+  padding-right: 5px;
+}
+
+@media only screen and (max-width: 700px) {
+  .logo {
+    height: 18px;
+  }
+  .hero h1 {
+    font-size: 24px;
+    margin-top: 30px;
+  }
+  .hero p {
+    font-size: 14px;
+    margin-top: -10px;
+  }
+  .hero form {
+    flex-direction: column;
+  }
+  .input {
+    width: 275px;
+    height: 45px;
+  }
+  .invalidInput {
+    width: 275px;
+    height: 45px;
+  }
+  .button {
+    width: 310px;
+    height: 47px;
+    margin: 0;
+    margin-top: 10px;
+  }
+  .illustration {
+    width: 350px;
+    object-fit: contain;
+    margin-top: 10px;
+  }
+  .socials {
+    margin-top: 10px;
+  }
+  .copyright {
+    font-size: 12px;
+  }
+  .errorMessage {
+    margin: 0;
+    margin-top: -20px;
+  }
+  .mobileButtonInvalid {
+    width: 310px;
+    height: 47px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--blue);
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+    box-shadow: 0px 10px 20px var(--pale-blue);
+    margin-top: 50px;
+  }
+  .mobileIllustrationInvalid {
+    width: 350px;
+    object-fit: contain;
+    margin-top: 47px;
+  }
+  .mobileInvalidSocials {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 87px;
+  }
+}
